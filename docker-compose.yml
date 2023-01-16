@@ -1,0 +1,13 @@
+version: '3.9'
+services:
+  database:
+    image: mariadb:10.1.48
+    container_name: db-sistemaegresados
+    ports:
+      - "13306:3306"
+    environment:
+      - MYSQL_DATABASE=db
+      - MYSQL_ROOT_PASSWORD=root
+    volumes:
+      - ./database/basedatos.sql:/docker-entrypoint-initdb.d/basedatos.sql
+    restart: 'always'
