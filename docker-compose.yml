@@ -9,5 +9,5 @@ services:
       - MYSQL_DATABASE=db
       - MYSQL_ROOT_PASSWORD=root
     volumes:
-      - ./database/basedatos.sql:/docker-entrypoint-initdb.d/basedatos.sql
+      - ./basedatos.sql:/docker-entrypoint-initdb.d/basedatos.sql
     restart: 'always'
